@@ -7,16 +7,15 @@ import {
   useNavigate,
   useSearchParams,
 } from '@remix-run/react';
-
-import type { NextMix } from 'nextmix-shared';
+import type { FormType } from 'nextmix-shared';
 
 type HTMLSubmitEvent = React.BaseSyntheticEvent<SubmitEvent, Event, HTMLFormElement>;
 type HTMLFormSubmitter = HTMLButtonElement | HTMLInputElement;
 
 // This is temporary until this happens: https://github.com/remix-run/remix/discussions/2481
-const StubForm: NextMix['Form'] = React.forwardRef<
+const StubForm: FormType = React.forwardRef<
   HTMLFormElement,
-  React.ComponentProps<NextMix['Form']>
+  React.ComponentProps<FormType>
 >((props, ref) => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -55,5 +54,5 @@ const StubForm: NextMix['Form'] = React.forwardRef<
   return <form ref={ref} {...props} onSubmit={onSubmit} />;
 });
 
-export const Form: NextMix['Form'] =
+export const Form: FormType =
   process.env.NEXTMIX_USE_STUB === 'true' ? StubForm : RemixForm;

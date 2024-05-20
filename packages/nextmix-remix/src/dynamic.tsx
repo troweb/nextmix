@@ -1,9 +1,8 @@
 /* eslint-disable react/display-name */
+import type { dynamicType } from 'nextmix-shared';
 import React, { ComponentType } from 'react';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const dynamic: NextMix['dynamic'] = (importer, options) => {
+export const dynamic: dynamicType = (importer, options) => {
   const opt = options ?? {};
   const { ssr } = opt;
 

@@ -5,6 +5,7 @@ Remix and Next.js Interoperability Layer.
 - Use this package if you want your components to work both in Remix and Next.js projects.  
 - **Don't** use this package If the components that you want to share between Remix and Next.js projects don't use Next.js/Remix specific APIs/Componetns e.g. `next/router`, `next/image`, links, meta, etc.  
 - **Don't** use this package if you want to migrate from one framework to other and forget about the previous one. We suggest that you refactor your page/route codes one by one.  
+- This package only supports the Next.js app router so you cannot use it in Next.js projects that use page router
 
 
 ## Install

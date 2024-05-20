@@ -2,7 +2,7 @@
 
 import { ForwardRefExoticComponent, useState } from 'react';
 
-import type { NextMix } from './types/NextMix';
+import type { useFetcherType } from '.';
 
 type State = 'idle' | 'loading' | 'submitting';
 
@@ -12,7 +12,7 @@ type State = 'idle' | 'loading' | 'submitting';
  *  here later
  */
 
-export const stubUseFetcher: NextMix['useFetcher'] = () => {
+export const stubUseFetcher: useFetcherType = () => {
   const [data, setData] = useState();
   const [state, setState] = useState<State>('idle');
 

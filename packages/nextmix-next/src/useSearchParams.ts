@@ -1,13 +1,14 @@
+'use client'
+
 import {
-  useSearchParams as useNextSearchParams,
+  useSearchParams as useSearchParamsNext,
   usePathname,
   useRouter,
 } from 'next/navigation';
+import type { useSearchParamsType } from 'nextmix-shared';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const useSearchParams: NextMix['useSearchParams'] = (init) => {
-  const params = useNextSearchParams();
+export const useSearchParams: useSearchParamsType = (init) => {
+  const params = useSearchParamsNext();
   const router = useRouter();
   const pathname = usePathname();
 

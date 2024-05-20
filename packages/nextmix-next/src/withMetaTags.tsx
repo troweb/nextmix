@@ -1,9 +1,9 @@
 /* eslint-disable react/display-name */
 import Head from 'next/head';
 
-import type { NextMix } from 'nextmix-shared';
+import type { withMetaTagsType } from 'nextmix-shared';
 
-export const withMetaTags: NextMix['withMetaTags'] = (Component, getMetaTags) => {
+export const withMetaTags: withMetaTagsType = (Component, getMetaTags) => {
   return (props: any) => {
     // TODO: implement this to be usable in next
     const meta = getMetaTags({ data: {}, params: {}, parentsData: {} });

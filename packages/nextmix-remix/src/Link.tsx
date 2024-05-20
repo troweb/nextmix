@@ -3,9 +3,9 @@ import { forwardRef } from 'react';
 
 import { Link as RemixLink } from '@remix-run/react';
 
-import type { NextMix } from 'nextmix-shared';
+import type { LinkType } from 'nextmix-shared';
 
-export const Link: NextMix['Link'] = forwardRef(function Link(props, ref) {
+export const Link: LinkType = forwardRef(function Link(props, ref) {
   const { to: propsTo, href, ...otherProps } = props;
   const to = propsTo ?? href;
 

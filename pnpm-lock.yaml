@@ -90,6 +90,9 @@ importers:
       '@remix-run/react':
         specifier: 2.9.2
         version: 2.9.2(react-dom@18.3.1)(react@18.3.1)(typescript@5.4.5)
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.12.12
       '@types/react':
         specifier: 18.3.2
         version: 18.3.2
@@ -114,9 +117,6 @@ importers:
 
   packages/nextmix-remix:
     dependencies:
-      mitt:
-        specifier: ^3.0.0
-        version: 3.0.1
       nextmix-shared:
         specifier: workspace:^
         version: link:../nextmix-shared
@@ -4725,6 +4725,7 @@ packages:
 
   /mitt@3.0.1:
     resolution: {integrity: sha512-vKivATfr97l2/QBCYAkXYDbrIWPM2IIKEl7YPhjCvKlG3kE2gm+uBo6nEXK3M5/Ffh/FLpKExzOQ3JJoJGFKBw==}
+    dev: true
 
   /mixin-deep@1.3.2:
     resolution: {integrity: sha512-WRoDn//mXBiJ1H40rqa3vH0toePwSsGb45iInWlTySa+Uu4k3tYUSxa2v1KqAiLtvlrSzaExqS1gtk96A9zvEA==}

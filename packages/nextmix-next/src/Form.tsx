@@ -2,10 +2,9 @@
 import React from 'react';
 
 import type { Form as RemixForm } from '@remix-run/react';
+import type { FormType } from 'nextmix-shared';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const Form: NextMix['Form'] = React.forwardRef<
+export const Form: FormType = React.forwardRef<
   HTMLFormElement,
   React.ComponentProps<typeof RemixForm>
 >((props, ref) => {

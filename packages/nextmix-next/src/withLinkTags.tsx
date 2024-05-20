@@ -1,9 +1,8 @@
 /* eslint-disable react/display-name */
 import Head from 'next/head';
+import type { withLinkTagsType } from 'nextmix-shared';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const withLinkTags: NextMix['withLinkTags'] = (Component, getLinks) => {
+export const withLinkTags: withLinkTagsType = (Component, getLinks) => {
   // Return a higher order component with Component
   return (props: any) => {
     const links = getLinks();

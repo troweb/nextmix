@@ -1,4 +1,6 @@
-'use client';
-import { useRouter as nextUseRouter } from 'next/router';
+'use client'
 
-export const useRouter = nextUseRouter;
+import { useRouter as useNextRouter } from 'next/navigation';
+import type { useRouterType } from 'nextmix-shared';
+
+export const useRouter: useRouterType = useNextRouter;

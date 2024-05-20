@@ -1,6 +1,6 @@
 {
   "name": "nextmix-shared",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "type": "commonjs",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -28,7 +28,7 @@
   ],
   "scripts": {
     "dev": "pnpm run build --watch",
-    "build": "tsup ./src/index.ts --dts --format esm,cjs",
+    "build": "tsup",
     "prepublish": "pnpm run build"
   },
   "peerDependencies": {

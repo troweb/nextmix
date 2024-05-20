@@ -2,10 +2,9 @@
 import { forwardRef } from 'react';
 
 import NextLink from 'next/link';
+import type { LinkType } from 'nextmix-shared';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const Link: NextMix['Link'] = forwardRef(function Link(props, ref) {
+export const Link: LinkType = forwardRef(function Link(props, ref) {
   const { to: toProp, href: hrefProp, prefetch, ...otherProps } = props;
   const href = hrefProp ?? toProp;
 

@@ -1,8 +1,7 @@
+import type { ImageType } from 'nextmix-shared';
 import { forwardRef } from 'react';
 
-import type { NextMix } from 'nextmix-shared';
-
-export const Image: NextMix['Image'] = forwardRef(function Image(props, ref) {
+export const Image: ImageType = forwardRef(function Image(props, ref) {
   const { layout, loader, blurDataURL, objectFit, objectPosition, ...imgProps } = props;
   // TODO: implement the layout, loader and blurDataUrl for remix
 

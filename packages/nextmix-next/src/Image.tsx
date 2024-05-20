@@ -1,12 +1,11 @@
 import { forwardRef } from 'react';
 
 import NextImage from 'next/image';
-
-import type { NextMix } from 'nextmix-shared';
+import type { ImageType } from 'nextmix-shared';
 
 type PlaceholderValue = 'blur' | 'empty';
 
-export const Image: NextMix['Image'] = forwardRef(function Image(props, ref) {
+export const Image: ImageType = forwardRef(function Image(props, ref) {
   const { src, placeholder, ...restOfProps } = props;
 
   if (src == null) {
@@ -18,10 +17,8 @@ export const Image: NextMix['Image'] = forwardRef(function Image(props, ref) {
   }
   const nextPlaceholder = placeholder as PlaceholderValue;
 
-  // I don't know why, but this is the only way I could get this to work
-  const NextImageComp = (NextImage as any).default;
   return (
-    <NextImageComp
+    <NextImage
       {...restOfProps}
       ref={ref}
       src={src}

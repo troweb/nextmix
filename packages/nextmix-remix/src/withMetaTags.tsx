@@ -1,6 +1,6 @@
-import type { NextMix } from 'nextmix-shared';
+import type { withMetaTagsType } from 'nextmix-shared';
 
 // This is noop for Remix as we use links and meta exports
-export const withMetaTags: NextMix['withMetaTags'] = (Component, getLinks) => {
+export const withMetaTags: withMetaTagsType = (Component, getLinks) => {
   return Component;
 };

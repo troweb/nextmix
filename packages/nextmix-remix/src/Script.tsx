@@ -1,3 +1,3 @@
-import type { NextMix } from 'nextmix-shared';
+import type { ScriptType } from 'nextmix-shared';
 
-export const Script: NextMix['Script'] = (props) => <script {...props} />;
+export const Script: ScriptType = (props) => <script {...props} />;

@@ -1,44 +1,11 @@
-import dynamic from 'next/dynamic';
-import { usePathname } from 'next/navigation';
-import Script from 'next/script';
-
-import type { NextMix } from 'nextmix-shared';
-
-import { Form } from './Form';
-import { Image } from './Image';
-import { Link } from './Link';
-import { useFetcher } from './useFetcher';
-import { useRouter } from './useRouter';
-import { useSearchParams } from './useSearchParams';
-import { withLinkTags } from './withLinkTags';
-import { withMetaTags } from './withMetaTags';
-
-// only for typechecking purposes
-const nextmix: NextMix = {
-  Script,
-  Form,
-  Link,
-  useRouter,
-  Image,
-  withLinkTags,
-  withMetaTags,
-  dynamic,
-  useFetcher,
-  useSearchParams,
-  usePathname,
-};
-
-export {
-  Script,
-  Form,
-  Link,
-  useRouter,
-  Image,
-  withLinkTags,
-  withMetaTags,
-  dynamic,
-  useFetcher,
-  useSearchParams,
-  usePathname,
-};
-export default nextmix;
+export { Form } from './Form';
+export { Link } from './Link';
+export { useRouter } from './useRouter';
+export { Image } from './Image';
+export { withLinkTags } from './withLinkTags';
+export { withMetaTags } from './withMetaTags';
+export { useSearchParams } from './useSearchParams';
+export { useFetcher } from './useFetcher';
+export { usePathname } from './usePathname';
+export { default as dynamic } from 'next/dynamic';
+export { default as Script } from 'next/script';
