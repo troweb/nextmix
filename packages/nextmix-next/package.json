@@ -48,7 +48,6 @@
     "@types/react": "*",
     "mitt": "^3.0.0",
     "next": "*",
-    "nextmix": "workspace:*",
     "react": "*",
     "tsup": "^8.0.1",
     "typescript": "^5.1.6"
