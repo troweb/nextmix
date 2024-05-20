@@ -1,0 +1,58 @@
+{
+  "name": "nextmix-remix",
+  "version": "0.2.3",
+  "type": "commonjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "default": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "next",
+    "remix",
+    "react",
+    "adapter"
+  ],
+  "scripts": {
+    "dev": "pnpm build --watch",
+    "build": "tsup ./src/index.ts --dts --format esm,cjs",
+    "prepublish": "pnpm build"
+  },
+  "dependencies": {
+    "mitt": "^3.0.0",
+    "nextmix-shared": "workspace:^"
+  },
+  "peerDependencies": {
+    "@remix-run/react": ">=2",
+    "react": "*"
+  },
+  "peerDependenciesMeta": {
+    "@remix-run/react": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@remix-run/react": "*",
+    "@types/react": "*",
+    "mitt": "^3.0.0",
+    "react": "*",
+    "tsup": "^8.0.1",
+    "typescript": "^5.1.6"
+  }
+}

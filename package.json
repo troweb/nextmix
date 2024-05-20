@@ -1,0 +1,49 @@
+{
+  "name": "nextmix",
+  "private": true,
+  "packageManager": "pnpm@8.15.8",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build"
+  },
+  "resolutions": {
+    "next": "14.2.3",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "@types/react": "18.3.2",
+    "@remix-run/node": "2.9.2",
+    "@remix-run/react": "2.9.2",
+    "@remix-run/serve": "2.9.2"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^12.1.1",
+    "commitlint": "^12.1.1",
+    "eslint": "^8.50.0",
+    "eslint-config-troweb": "^1.1.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^7.3.0",
+    "node-gyp": "^9.1.0",
+    "postcss-styled-syntax": "^0.5.0",
+    "prettier": "^3.1.0",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-high-performance-animation": "^1.9.0",
+    "stylelint-plugin-defensive-css": "^0.9.1",
+    "turbo": "^1.11.2",
+    "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.{ts}": [
+        "eslint --fix"
+      ],
+      "*.{tsx}": [
+        "eslint --fix",
+        "stylelint --fix"
+      ]
+    }
+  }
+}
