@@ -1,5 +1,6 @@
-import type { ImageType } from 'nextmix-shared';
 import { forwardRef } from 'react';
+
+import type { ImageType } from 'nextmix-shared';
 
 export const Image: ImageType = forwardRef(function Image(props, ref) {
   const { layout, loader, blurDataURL, objectFit, objectPosition, ...imgProps } = props;

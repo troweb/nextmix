@@ -1,5 +1,7 @@
 import { useLocation, useSearchParams } from '@remix-run/react';
 
+import type { DefaultType } from 'nextmix-shared';
+
 import { dynamic } from './dynamic';
 import { Form } from './Form';
 import { Image } from './Image';
@@ -9,7 +11,6 @@ import { useFetcher } from './useFetcher';
 import { useRouter } from './useRouter';
 import { withLinkTags } from './withLinkTags';
 import { withMetaTags } from './withMetaTags';
-import type { DefaultType } from 'nextmix-shared';
 
 const usePathname = () => useLocation().pathname;
 

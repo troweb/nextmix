@@ -25,7 +25,7 @@ export type dynamicType = NextMixDynamic;
 export type useSearchParamsType = typeof useSearchParams;
 export type usePathnameType = typeof usePathname;
 
-export type DefaultType = {
+export interface DefaultType {
   Script: ScriptType;
   Form: FormType;
   Link: LinkType;
@@ -37,4 +37,4 @@ export type DefaultType = {
   useRouter: useRouterType;
   useSearchParams: useSearchParamsType;
   usePathname: usePathnameType;
-};
+}

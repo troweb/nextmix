@@ -4,8 +4,8 @@ import type { ComponentType, Component, RefAttributes, LazyExoticComponent } fro
 type LoaderComponent<P = {}> = Promise<
   | ComponentType<P>
   | {
-    default: ComponentType<P>;
-  }
+      default: ComponentType<P>;
+    }
 >;
 type Loader<P = {}> = () => LoaderComponent<P> /* | LoaderComponent<P> */;
 interface LoaderMap {
@@ -37,7 +37,4 @@ type DynamicOptions<P = {}> = LoadableGeneratedOptions & {
 export type NextMixDynamic = <P extends RefAttributes<Component<{}, any, any>> = any>(
   dynamicOptions: Loader<P> /* | DynamicOptions<P> */,
   options?: DynamicOptions<P>,
-) =>
-  | ComponentType<P>
-  | LazyExoticComponent<ComponentType<P>>
-  | (() => null);
+) => ComponentType<P> | LazyExoticComponent<ComponentType<P>> | (() => null);
